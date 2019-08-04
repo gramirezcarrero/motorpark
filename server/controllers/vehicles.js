@@ -3,6 +3,7 @@ const Sequialize = require('sequelize');
 const $ = Sequialize.Op;
 module.exports = {
   create(req, res) {
+    console.log(req.req, 'aqui')
     return Vehicles.Vehicles
       .create({
         plate: req.body.plate,
@@ -17,25 +18,36 @@ module.exports = {
   },
   list(req, res) {
     Vehicles.Vehicles.findAll()
-      .then(todos => res.status(200).send({
+      .then(vehicles => res.status(200).send({
         success: 'true',
         message: 'vehicles retrieved successfully',
-        todos,
+        vehicles,
       }));
   },
-  findAny(req, res) {
-    console.log(req.query)
-    Vehicles.Vehicles.findAll({
-      where: {
-        type: { [$.iLike]: `%${req.query.type}%` }
-      }
-    })
-      .then(todos => res.status(200).send({
+  findAnyString(req, res) {
+    let where = {}
+    if (req.query) {
+      let sentence = {}
+      Object.keys(req.query).map((e) => sentence[e] = { [$.iLike]: `%${req.query[e]}%` })
+      where = { where: sentence }
+    }
+    Vehicles.Vehicles.findAll(
+      where
+    )
+      .then(vehicles => res.status(200).send({
         success: 'true',
         message: 'vehicles retrieved successfully',
-        todos,
+        vehicles,
       }));
-
+  },
+  deleteAll(req, res) {
+    Vehicles.Vehicles.findAll().then(vehicles => {
+      vehicles.map((vehicle) => {
+        vehicle.destroy()
+          .catch(error => res.status(400).send(error));
+      })
+    }).then((vehicles) => res.status(204).send()
+    )
   }
 
 
