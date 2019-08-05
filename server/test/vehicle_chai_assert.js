@@ -26,7 +26,8 @@ describe("Server", () => {
             .send({
                 'plate': 'GYT123',
                 'type': 'Moto',
-                'note': ''
+                'note': '',
+                'status': 'in'
             })
             .end((err, res) => {
                 if(err) done(err)
@@ -40,10 +41,9 @@ describe("Server", () => {
         chai.request(server)
             .delete('/api/vehicles')
             .end((err, res) => {
-                if(err) done(err)
+                if(err){done(err)};
                 res.should.have.status(204);
                 done();
             });
-        //
     })
 });

@@ -9,6 +9,7 @@ module.exports = {
         plate: req.body.plate,
         note: req.body.note,
         type: req.body.type,
+        status: req.body.status
       })
       .then(vehicle => res.status(201).send(vehicle))
       .catch(error => {
@@ -48,6 +49,24 @@ module.exports = {
       })
     }).then((vehicles) => res.status(204).send()
     )
+  }, 
+  updateQuery(req, res) {
+    return Vehicles.Vehicles
+    .findByPk(req.params.vehicleId)
+    .then(vehicle => {
+      if (!vehicle) {
+        return res.status(404).send({
+          message: 'vehicle Not Found',
+        });
+      }
+      return vehicle
+        .update({
+          status: req.body.status || vehicle.status,
+        })
+        .then(() => res.status(200).send(vehicle))  // Send back the updated todo.
+        .catch((error) => res.status(400).send(error));
+    })
+    .catch((error) => res.status(400).send(error));
   }
 
 

@@ -3,6 +3,7 @@ module.exports = (sequelize, DataTypes) => {
   return sequelize.define('Vehicles', {
     type: DataTypes.STRING,
     plate: DataTypes.STRING,
+    status: DataTypes.STRING,
     note: DataTypes.TEXT
   }, {});
   // Vehicle.associate = function(models) {

@@ -9,4 +9,5 @@ module.exports = (app) => {
     app.get('/api/vehicles', vehiclesController.list);
     app.get('/api/vehicles/any', vehiclesController.findAnyString);
     app.delete('/api/vehicles', vehiclesController.deleteAll);
+    app.put('/api/vehicles/:vehicleId', vehiclesController.updateQuery);
 };
