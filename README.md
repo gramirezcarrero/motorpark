@@ -1,4 +1,4 @@
-# motorpark
+# Motorpark
 Mini app to register vehicles.
 ## screen 1
     1. In the first screen we have a list of vehicles.
