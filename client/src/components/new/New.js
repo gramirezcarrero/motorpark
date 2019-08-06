@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import {Link} from 'react-router-dom';
 import { postVehicle, dataForSave } from '../../redux/actions';
+import imgCar from '../list/img/car.svg'
 import './new.scss'
 type Props = {};
 type State = { };
@@ -50,7 +51,7 @@ class New extends Component<Props, State> {
                 <div className="box">
                     <div className="header">
                         <div className="circulo">
-                            <i className="fas fa-car-alt"></i>
+                        <img className="bottom" alt="car" src={imgCar}></img>
                         </div>
                         <div className="desc">
                             <p>Motor</p>
