@@ -1,18 +1,18 @@
 # motorpark
 Mini app to register vehicles.
 ## screen 1
-    the first screen we have a list for vehicles.
-    you cand seach by licence Plate or by type of vehicle.
+    1. In the first screen we have a list of vehicles.
+You can seach by licence plate or by type of vehicle.
 
 ![Alt text](/screenshot/screenshot1.png?raw=true "List")
 
 ## screen 2 
-    the second it's by create a new insert into the sistem. 
-    you should choose a type  vehicle and save
+    2. The second screen is to create a new item into the system. You can choose a type of vehicle and saved.
+
 ![Alt text](/screenshot/screenshot2.png?raw=true "List")
 ## screen 3 
-    Modal for update the status when client going be out and pay.
-    you can filter, and you can click in a vehicle to update
+    Modal for update the status. When client is going out and paid. You can filter and click in a vehicle to update the status.
+
 ![Alt text](/screenshot/screenshot3.png?raw=true "List")
 # TO INIT THE APP
 The app Contain 3 folders for server and client and database.

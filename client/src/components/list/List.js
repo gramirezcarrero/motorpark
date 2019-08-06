@@ -132,7 +132,7 @@ class List extends Component<Props, State> {
         return (
             <div className="container"> 
             <div className={this.state.class_modal}>
-                <div className="message"> Client going be out and pay, this update change "into park" to "payout" ... are you sure?</div>
+                <div className="message"> Are you sure you want to finish the process?</div>
                 <div className="container-modal-button">
                     <div onClick={this.cancelAction} className="cancel">Cancel</div>
                     <div onClick={this.sendAction} className="update">Out</div>
