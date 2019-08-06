@@ -134,8 +134,8 @@ class List extends Component<Props, State> {
             <div className={this.state.class_modal}>
                 <div className="message"> Are you sure you want to finish the process?</div>
                 <div className="container-modal-button">
-                    <div onClick={this.cancelAction} className="cancel">Cancel</div>
-                    <div onClick={this.sendAction} className="update">Out</div>
+                    <div onClick={this.cancelAction} className="cancel">No</div>
+                    <div onClick={this.sendAction} className="update">Yes</div>
                 </div>
             </div>
                 <div className="box">
@@ -145,7 +145,7 @@ class List extends Component<Props, State> {
                         </div>
                         <div className="desc">
                             <p>Motor</p>
-                            <p>Park <br></br> Version 1 </p>
+                            <p>Park <br></br><span className="version"> Version 0.1</span>  </p>
                         </div>
                     </div>
                     

@@ -62,8 +62,11 @@ span.number {
   margin-top: 25px;
   margin-left: -50px;
 }
+.version{
+  color:#000;
+}
 .header p{
-  color: #000;
+  color: white;
   font-size: .8 em;
   font-weight: 600;
   line-height: 18px;
@@ -101,6 +104,7 @@ span.number {
     color: black;
     padding: 10px;
     margin-top: 32px;
+    text-align: center;
   }
   .cancel{
     border-top-left-radius: 4px;

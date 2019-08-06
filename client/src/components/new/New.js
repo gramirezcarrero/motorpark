@@ -55,7 +55,7 @@ class New extends Component<Props, State> {
                         </div>
                         <div className="desc">
                             <p>Motor</p>
-                            <p>Park <br></br> Version 1 </p>
+                            <p>Park <br></br> <span className="version">Version 0.1 </span> </p>
                         </div>
                     </div>
                     <div className="form">
