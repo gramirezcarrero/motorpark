@@ -24,20 +24,20 @@ commands:
     yarn && yarn start
 ```
 ### update the config
-    you need update config whit your own credentials config.json
+    You need change the credentials in config.json:
         "development": {
         "username": "your user name",
         "password": "your password"
         }
-you can create the database  motopark or import this: in the directory database.
+You can create the database motopark or import this: in the directory database.
 ```      
     cd database
         import the database
 ```
-you can run the test into server or the client 
+You can run the test into server or the client.
 ```
     cd the_directory
     yarn run test
 
 ```
-i hope you like it
+I hope you like it.
